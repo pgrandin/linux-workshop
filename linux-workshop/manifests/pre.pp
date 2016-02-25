@@ -23,4 +23,9 @@ class linux-workshop::pre {
     proto  => tcp,
     action => accept,
   }
+  firewall { '999 drop unwanted UDP':
+    chain  => 'OUTPUT',
+    action => drop, 
+    proto  => 'udp',
+  }
 }
