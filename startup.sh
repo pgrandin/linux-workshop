@@ -1,5 +1,6 @@
-sudo apt-get install puppet-common
-sudo puppet module install puppetlabs/firewall
-sudo apt-get install -y git
-sudo git clone https://github.com/pgrandin/linux-workshop.git /etc/puppet/modules/
-sudo puppet apply /etc/puppet/modules/linux-workshop/nodes.pp
+apt-get install puppet-common
+apt-get install -y git
+[ -d /etc/puppet/modules/ ] || mkdir /etc/puppet/modules/
+git clone https://github.com/pgrandin/linux-workshop.git /etc/puppet/modules/
+puppet module install puppetlabs/firewall
+puppet apply /etc/puppet/modules/linux-workshop/nodes.pp
