@@ -1,5 +1,4 @@
-apt-get install puppet-common
-apt-get install -y git fluxbox xterm wireshark vnc4server gcc
+apt-get install -y puppet-common git fluxbox xterm wireshark vnc4server gcc
 wget https://raw.githubusercontent.com/pgrandin/linux-workshop/master/demo.c -O /usr/src/demo.c
 gcc -o /usr/local/bin/workshop-server /usr/src/demo.c
 rm /usr/src/demo.c
